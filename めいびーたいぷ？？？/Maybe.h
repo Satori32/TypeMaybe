@@ -7,14 +7,23 @@ class Maybe {
 public:
 	Maybe() = delete;
 	Maybe(const std::initializer_list<T>& In) :B(In.begin(), In.end()) {
-		std::random_device rd;
-		std::uniform_int_distribution<std::size_t> UI(0, In.size() - 1);
-
-		P = UI(rd);
+		Reroll();
 
 		return;
 	}
+	const T& Get() {
+		return B[P];
+	}
+	std::size_t Size() {
+		return B.size();
+	}
+	bool Reroll() {
+		std::random_device rd;
+		std::uniform_int_distribution<std::size_t> UI(0, B.size() - 1);
+		P = UI(rd);
 
+		return true;
+	}
 	const T& operator ()() {
 		return B[P];
 	}

@@ -7,6 +7,9 @@ int main() {
 
 	std::cout << M() << std::endl;
 	std::cout << M() << std::endl;
-	
+	M.Reroll();
+	std::cout << M() << std::endl;
+	std::cout << M() << std::endl;
+	std::cout << M.Get() << std::endl;	
 	return 0;
 }
