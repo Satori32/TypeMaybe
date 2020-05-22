@@ -24,7 +24,7 @@ public:
 
 		return true;
 	}
-	bool Observation(const std::size_t& In) {
+	bool Sight(const std::size_t& In) {
 		return In == P;
 	}
 	const T& operator ()() {
