@@ -24,6 +24,9 @@ public:
 
 		return true;
 	}
+	bool Observation(const std::size_t& In) {
+		return In == P;
+	}
 	const T& operator ()() {
 		return B[P];
 	}
