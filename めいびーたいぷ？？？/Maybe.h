@@ -24,7 +24,7 @@ public:
 
 		return true;
 	}
-	bool Sight(const std::size_t& In) {
+	bool Look(const std::size_t& In) {
 		return In == P;
 	}
 	const T& operator ()() {

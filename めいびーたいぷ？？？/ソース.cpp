@@ -12,7 +12,7 @@ int main() {
 	std::cout << M() << std::endl;
 	std::cout << M.Get() << std::endl;	
 
-	if (M.Sight(2)) {
+	if (M.Look(2)) {
 		std::cout << "Good!" << std::endl;
 	}
 	else {
